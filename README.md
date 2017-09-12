@@ -1,26 +1,14 @@
-## SuffixTree JS
+## dagViz
 
-SuffixTree JS is a javascript implementation of [Ukkonen's algorithm](https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf) for "generalized suffix tree". The code is essentially based on the snippets provided here : http://www.allisons.org/ll/AlgDS/Tree/Suffix/. 
+Le but de ce répertoire github est d'offrir la visualisation de graphe dirigé pour mes étudiants du cours IFT3295.
 
-This is intended for CS students or anyone who want to build a generalized suffix tree in an intuitive and easy way.
+Le format accepté est le format `edgelist` avec ou sans les poids des arrêtes. Ce format liste toute les arrêtes du graphe.
 
-### Visualization
+#### Exemple1
 
-You can enter your sequences and build your tree here : http://mrnoutahi.com/SuffixTreeJS/ 
-
-The visualization is done using [d3js](https://d3js.org/). 
-
-####Important points: 
-
-1. Your sequences should be separated by a coma (","). A space is considered as an actual character so don't put spaces between your sequences.
-2. The following characters are special chars used to denote the end of a sequence : ```#$&%@?+*```
-4. Each internal node can be collapsed.
-5. The suffix on each leaf end with ```[start, number]``` where ```start``` is the position of the suffix (starting at 0) and ```number``` is the sequence number of the sequence the suffix is from. I also use different colors for each sequence in the representation. 
-3. There is a maximum of 12 sequences allowed (since the color palette used has only 12 colors).
-
-Check the **gh-pages** branch if you're interested in the visualization part. The theme used is [Solo](http://chibicode.github.io/solo). I'm open to any suggestions and pull requests are welcome.
+Dans cet exemple, le poids des arrêtes représente le score de l'alignement entre chaque paire de séquences considérée.
 
 
-### License
+#### Exemple2
 
-This is licensed under the MIT License
+Dans cet exemple, il n'y a pas de poids pour les arrêtes, et donc par défaut tous les poids sont à 1.
