@@ -1,7 +1,7 @@
 # Site settings
-title: SuffixTreeJS
-tag_text: SuffixTreeJS
-description: "SuffixTreeJS, draw suffix tree in javascript using d3js"
+title: dagViz
+tag_text: dagViz
+description: ""
 
 # Build settings
 markdown: kramdown

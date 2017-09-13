@@ -39,14 +39,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
 }
 
 @media (min-width: 30rem) {
   h1 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -54,19 +54,6 @@ h1 a {
   color: inherit;
 }
 
-h2 {
-  margin-top: 2rem;
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-
-@media (min-width: 30rem) {
-  h2 {
-    margin-top: 2.5rem;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-}
 
 h3, h4, h5, h6 {
   margin-top: 1.5rem;
@@ -107,13 +94,8 @@ hr {
   top: -1px;
 }
 
-.container img, .container iframe {
+container iframe {
   max-width: 100%;
-}
-
-.container img {
-  margin: 0 auto;
-  display: block;
 }
 
 table {
@@ -146,16 +128,9 @@ pre > code {
 }
 
 .container {
-  min-width: 15rem;
-  max-width: 55rem;
+  max-width: 40rem;
   margin: 0 auto;
   padding: 0 1rem;
   overflow: auto;
 
-}
-
-.author {
-  font-size: 0.8em;
-  text-align: "left";
-  text-transform: italic;
 }

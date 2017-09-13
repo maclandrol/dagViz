@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="{{ site.description }}">
+  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
+  <title>dagViz</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-{% include head.html %}
+
 </head>
 <body>
   <div class="container">
-    <h1><a href="./">{{ site.tag_text }}</a></h1>
-    {{ content }}
+    <h1><a href="./">dagViz</a></h1>
+    Page Not Found.
     <div id="error"></div>
     <div class="input">
     <textarea id="edgelist" name="edgelist"></textarea>
@@ -26,6 +26,12 @@
     </div>
   </div>
 
-{% include scripts.html %}
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="https://rawgit.com/eligrey/FileSaver.js/master/FileSaver.js"></script>
+<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+<script src="https://cdn.rawgit.com/cpettitt/dagre/v0.7.4/dist/dagre.js"></script>
+<script src="js/cytoscape-dagre.js"></script>
+<script src="js/graphdisp.js"></script>
 </body>
 </html>
