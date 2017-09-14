@@ -1,7 +1,7 @@
 
 ## dagViz
 
-Le but de ce répertoire github est d'offrir la visualisation de graphe dirigé pour mes étudiants du cours IFT3295.
+Le but de ce répertoire github est d'offrir la visualisation de graphe dirigé pour les étudiants du cours IFT3295.  Vous pouvez utiliser l'app web ici ==> https://mrnoutahi.com/dagViz/
 
 Le format accepté est le format `edgelist` avec ou sans les poids des arrêtes. Ce format liste toute les arrêtes du graphe.
 
