@@ -78,7 +78,12 @@ $(document).ready(function () {
                 'line-color': '#bbb',
                 'target-arrow-color': '#bbb',
                 'curve-style': 'bezier',
-                'width': 'data(width)',
+                'width': 'data(width)',         
+              }
+            },
+            {
+              selector: '.label',
+              style: {
                 'label': 'data(weight)',
                 'text-margin-y': -10,
                 'font-size': '8px'
@@ -106,8 +111,9 @@ $( "#show" ).click(function() {
     var weight;
     var haserror = false;
     var errorline = "";
-    var max_weight = -1
-    var min_weight = Math.pow(10,10)
+    var max_weight = -1;
+    var has_weight = false;
+    var min_weight = Math.pow(10,10);
     for(var i = 0; i<linedata.length; i++){
       curline = linedata[i].split(/\s+/g);
       weight = 1;
@@ -117,6 +123,7 @@ $( "#show" ).click(function() {
       }      
       else if(curline.length > 2){
          weight = parseFloat(curline[2]);
+         has_weight = true;
       }
       min_weight = Math.min(min_weight, weight);
       max_weight = Math.max(max_weight, weight);
@@ -143,13 +150,23 @@ $( "#show" ).click(function() {
         }
         $( "#error" ).toggle(false);
         cy.json({ elements:  ndata.concat(edata) });
+        if(has_weight){
+          
+          cy.$('edge').addClass('label');
+        }
+        else if(cy.$('edge').hasClass('label')){
+          cy.$('edge').removeClass('label'); 
+        }
+
         var layout = cy.makeLayout({ name: 'dagre',
                                      rankDir: 'LR',
                                      ranker: 'longest-path',
                                      spacingFactor: 2
                                   });
         layout.run();
+
       }
+
 
   });
 $( "#save" ).click(function() {
