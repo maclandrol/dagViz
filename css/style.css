@@ -6,12 +6,13 @@
 
 .input textarea{
 	min-height: 10rem;
+	max-width: 60rem;
 	width: 30rem;
 	display: block;
 }
 
 #show{
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 	display: block;
 	clear: right;
 	text-align: right;
@@ -22,6 +23,12 @@
 	display: block;
 	text-align: right;
 	float: top;
+	margin-bottom: 0px;
+	border: 1px solid #777;
+ 	background: none;
+ 	box-shadow:none;
+ 	border-radius: 0px;
+
 
 }
 
@@ -35,11 +42,25 @@
 	background-color: #ffd3d3;
 }
 
- #cy {
-    min-width: 30rem;
-    height: 80%;
-    position: absolute;
+
+#output{
+	max-width: 80rem;
+	min-height: 30rem;
+	position: relative;
+	padding: 2px;
+	padding-left: 0;
+}
+
+#cy {
+	height: 75vh; 
+	width: 90%;
+	max-width: 75rem;
+    position: relative;
     z-index: 999;
-    border : 2px solid #555;
-    margin-bottom: 5rem;
+    margin: 0.5rem 0.5rem;
+    margin-left: 0;
+    margin-top: 0;
+	border : 2px solid #666;
+   	left: 0;
+	top: 0;
 }
