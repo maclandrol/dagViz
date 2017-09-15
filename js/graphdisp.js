@@ -51,32 +51,31 @@ $(document).ready(function () {
               selector: 'node',
               style: {
                 'content': 'data(id)',
-                'text-opacity': 0.5,
+                'text-opacity': 0.9,
                 'text-valign': 'center',
                 'text-halign': 'center',
                 'font-family': 'Courier Serif',
                 'font-size': '10px',
-                'font-weight': 300,
+                'font-weight': 500,
                 'padding': '4px',
                 'shape': 'roundrectangle',
-                'background-color': 'white',
                 'width': 'label',
                 'height': 'label',
                 'text-wrap': 'wrap',
                 'text-outline-color': 'black',
-                'color':  '#dd0000',
-                'border-width' : '2px',
-                'border-style' : 'double',
-                'border-color':  'black'
-
+                'background-color': '#fefefe',
+                'color':  '#EC644B',
+                'border-width' : '1px',
+                'border-style' : 'solid',
+                'border-color':  '#111'
               }
             },
             {
               selector: 'edge',
               style: {
                 'target-arrow-shape': 'triangle',
-                'line-color': '#bbb',
-                'target-arrow-color': '#bbb',
+                'line-color': '#aaa',
+                'target-arrow-color': '#aaa',
                 'curve-style': 'bezier',
                 'width': 'data(width)',         
               }
@@ -170,8 +169,9 @@ $( "#show" ).click(function() {
 
   });
 $( "#save" ).click(function() {
+  var scl = cy.zoom();
   var b64key = 'base64,';
-  var cypng = cy.png({full:true, maxWidth:1920, maxHeight:1200})
+  var cypng = cy.png({full:true, scale:scl, maxWidth:3996  , maxHeight:2160})
   var b64 = cypng.substring( cypng.indexOf(b64key) + b64key.length );
   var imgBlob = base64ToBlob( b64, 'image/png' );
   saveAs( imgBlob, 'graph.png' );

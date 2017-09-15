@@ -2,11 +2,13 @@
 	width:inherit;
 	display: inline-block;
 	margin-bottom: 2rem;
+	max-height: 50rem;
 }
 
 .input textarea{
 	min-height: 10rem;
-	max-width: 60rem;
+	max-width: 50rem;
+	max-height: 30rem;
 	width: 30rem;
 	display: block;
 }
@@ -19,14 +21,25 @@
 	float: right;
 }
 
+#exportpng{
+	font-size: 0.8rem;
+	padding-right: 5px;
+	max-width: 85%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 #save{
 	display: block;
 	text-align: right;
 	float: top;
 	margin-bottom: 0px;
-	border: 1px solid #777;
+	padding: 5px;
+	border: 1px solid #aaa;
+	-webkit-box-shadow: 0px 0px 2px 1px  #ccc;
+    -moz-box-shadow: 0px 0px 2px  1px #ccc;
+    box-shadow: 0px 0px 2px  1px #ccc;
  	background: none;
- 	box-shadow:none;
  	border-radius: 0px;
 
 
@@ -44,7 +57,7 @@
 
 
 #output{
-	max-width: 80rem;
+	max-width: 75rem;
 	min-height: 30rem;
 	position: relative;
 	padding: 2px;
@@ -52,6 +65,7 @@
 }
 
 #cy {
+	min-height: 25rem;
 	height: 75vh; 
 	width: 90%;
 	max-width: 75rem;
@@ -60,7 +74,11 @@
     margin: 0.5rem 0.5rem;
     margin-left: 0;
     margin-top: 0;
-	border : 2px solid #666;
+	border : 1px solid #aaa;
+	background-color: #fefefe,
+	-webkit-box-shadow: 0px 0px 1px 1px  #ccc inset;
+    -moz-box-shadow: 0px 0px 1px  1px #ccc inset;
+    box-shadow: 0px 0px 1px  1px #ccc inset;
    	left: 0;
 	top: 0;
 }

@@ -13,6 +13,7 @@ html {
 body {
   margin: 2rem 0 5rem;
   color: #333;
+  height: 100%;
 }
 
 @media (min-width: 30rem) {
@@ -129,8 +130,8 @@ pre > code {
 }
 
 .container {
-  max-width: 40rem;
-  margin: 0 auto;
+  max-width: 80rem;
+  margin: 0 5rem;
   padding: 0 1rem;
   overflow: auto;
 
